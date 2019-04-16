@@ -154,25 +154,25 @@
                     <input type="text" name="Calories" id="Calories" class="form-control" value="{{old('Calories')}}">
 
                     <br>
-                    <label for="Fat">Fat</label>
+                    <label for="Fat">Fat (g)</label>
                     <span class="text-danger" id="fatError"></span>
 
                     <input type="text" name="Fat" id="Fat" class="form-control" value="{{old('Fat')}}">
 
                     <br>
-                    <label for="Cholesterol">Cholesterol</label>
+                    <label for="Cholesterol">Cholesterol (g)</label>
                     <span class="text-danger" id="cholesterolError"></span>
 
                     <input type="text" name="Cholesterol" id="Cholesterol" class="form-control" value="{{old('Cholesterol')}}">
 
                     <br>
-                    <label for="Sugar">Sugar</label>
+                    <label for="Sugar">Sugar (g)</label>
                     <span class="text-danger" id="sugarError"></span>
 
                     <input type="text" name="Sugar" id="Sugar" class="form-control" value="{{old('Sugar')}}">
 
                     <br>
-                    <label for="Protein">Protein</label>
+                    <label for="Protein">Protein (g)</label>
                     <span class="text-danger" id="proteinError"></span>
 
                     <input type="text" name="Protein" id="Protein" class="form-control" value="{{old('Protein')}}">
@@ -184,7 +184,7 @@
                     <input type="text" name="Sodium" id="Sodium" class="form-control" value="{{old('Sodium')}}">
 
                     <br>
-                    <label for="Carbs">Carbs</label>
+                    <label for="Carbs">Carbs (g)</label>
                     <span class="text-danger" id="carbsError"></span>
 
                     <input type="text" name="Carbs" id="Carbs" class="form-control" value="{{old('Carbs')}}">
