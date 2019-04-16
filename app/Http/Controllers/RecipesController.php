@@ -87,7 +87,7 @@ class RecipesController extends Controller
     }
 
     public function Index(){
-        $recipes = Recipe::all();
+        $recipes = Recipe::orderBy('created_at', 'desc')->get();
 
         return view('recipesIndex',[
             'isSearchResults'=>false,

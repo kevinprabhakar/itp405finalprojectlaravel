@@ -1,6 +1,6 @@
 @extends('layout')
 
-@section('title','{{$recipe->Title}}')
+@section('title','Recipe Display')
 
 <!-- Defines a section -->
 @section('main')
