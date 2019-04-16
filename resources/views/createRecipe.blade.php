@@ -30,6 +30,7 @@
 
              $('#recipesForm').submit(function(e){
                  e.preventDefault();
+                 e.stopImmediatePropagation();
 
                  var form = $(this);
                 var urlReal = form.attr('action');
@@ -54,7 +55,7 @@
                           Carbs: $("#Carbs").val()
                       },
                       success: function(response){
-                          $('#recipesForm').unbind('submit').submit();
+                          window.location.href='/recipes';
                       },
                       error: function(response){
                           laravelErrors = response["responseJSON"]
@@ -178,7 +179,7 @@
                     <input type="text" name="Protein" id="Protein" class="form-control" value="{{old('Protein')}}">
 
                     <br>
-                    <label for="Sodium">Sodium</label>
+                    <label for="Sodium">Sodium (g)</label>
                     <span class="text-danger" id="sodiumError"></span>
 
                     <input type="text" name="Sodium" id="Sodium" class="form-control" value="{{old('Sodium')}}">
