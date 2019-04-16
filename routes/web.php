@@ -19,9 +19,7 @@ Route::get('/', function () {
 Route::post('/signup', 'SignUpController@signup');
 Route::get('/signup','SignUpController@index');
 Route::get('/login', 'LoginController@index');
-Route::get('/logout', function(){
-    return redirect('/recipes');
-});
+
 Route::post('/login','LoginController@login');
 Route::post("/autocomplete",'RecipesController@autocompleteIngredients');
 
