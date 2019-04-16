@@ -60,6 +60,8 @@
 
             $('#searchForm').submit(function(e){
                 e.preventDefault();
+                e.stopImmediatePropagation();
+
 
                 var form = $(this);
                var urlReal = form.attr('action');
@@ -76,7 +78,7 @@
 
                      },
                      success: function(response){
-                         $('#searchForm').unbind('submit').submit();
+                         $(this).unbind('submit').submit();
                      },
                      error: function(response){
                          laravelErrors = response["responseJSON"]
@@ -94,6 +96,7 @@
                          }
                      }
                  })
+                 return false;
             })
 
          })
