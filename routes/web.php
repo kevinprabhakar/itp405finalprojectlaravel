@@ -22,11 +22,13 @@ Route::get('/login', 'LoginController@index');
 Route::post('/login','LoginController@login');
 Route::post("/autocomplete",'RecipesController@autocompleteIngredients');
 
+Route::get('/recipes','RecipesController@Index');
+
+
 
 Route::middleware(['Authenicated'])->group(function(){
     Route::post('/recipes/new','RecipesController@CreateRecipe');
     Route::get('/recipes/new','RecipesController@showCreateRecipesPage');
-    Route::get('/recipes','RecipesController@Index');
     Route::get('/recipes/{recipeId}','RecipesController@GetRecipe');
 
     Route::post('/reviews/new/{recipeId}','ReviewsController@CreateReview');
