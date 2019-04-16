@@ -23,7 +23,7 @@ class RecipesController extends Controller
         $validation = Validator::make($input, [
             'name'=>'required',
             'foodTypeSelect'=>'required',
-            "amount.*"  => "required|regex:/^[\pL\s\-]+$/u",
+            "amount.*"  => "required",
             'ingredient.*' => "required",
             'direction.*'=>"required|min:10",
             'Calories' => 'required|numeric',
