@@ -27,9 +27,8 @@ class LoginController extends Controller
         }
     }
 
-    public function logout()
-    {
-        Auth::logout();
-        return redirect('/recipes');
+    public function logout(Request $request) {
+      Auth::logout();
+      return redirect('/login');
     }
 }
