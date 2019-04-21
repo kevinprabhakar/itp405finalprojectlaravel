@@ -62,10 +62,8 @@
                 e.preventDefault();
                 e.stopImmediatePropagation();
 
-
                 var form = $(this);
                var urlReal = form.attr('action');
-
 
                  $.ajax({
                      url: urlReal,
@@ -77,8 +75,8 @@
                          ingredient:$("input[name='ingredient[]']").map(function() { return this.value; }).get(),
 
                      },
-                     success: function(response){
-                         $(this).unbind('submit').submit();
+                     success: function(data){
+                         $('.container-fluid').html(data);
                      },
                      error: function(response){
                          laravelErrors = response["responseJSON"]
@@ -96,7 +94,6 @@
                          }
                      }
                  })
-                 return false;
             })
 
          })
